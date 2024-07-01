@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividindo</title>
+</head>
+<body>
+    <div id="caguei">O resultado é: </div>
+</body>
+<script>
+    resultado = document.getElementById("caguei")
+
+let numeros = [];
+
+numeros[0] = solicitarPrimeiroNumero();
+
+numeros[1] = solicitarSegundoNumero();
+
+var resultadoDivisao = Dividir(numeros);
+
+function solicitarPrimeiroNumero() {
+    var n1 = prompt('Insira um valor: ');
+
+    if (n1 < 0) {
+        alert('O número precisa ser inteiro e positivo.');
+
+        return solicitarPrimeiroNumero();
+    } else {
+        return n1;
+    }
+}
+
+function solicitarSegundoNumero() {
+    var n2 = prompt('Insira outro valor: ');
+
+    if (n2 < 0) {
+        alert('Insira um número inteiro e positivo.');
+        return solicitarSegundoNumero();
+    } else {
+        return n2;
+    }
+}
+
+function Dividir(numeros) {
+    var Divisao = 0;
+    Divisao = numeros[0] / numeros[1];
+    return Divisao;
+}
+
+resultado.innerHTML += (resultadoDivisao);
+</script>
+</html>

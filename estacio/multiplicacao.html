@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicação em JS</title>
+</head>
+<body>
+    <div id="multi"
+    >Resultado da multiplicação: 
+    </div>
+</body>
+<script>
+    var divLocal = document.getElementById("multi");
+
+    var numero1 = prompt("Insira o primeiro número: ");
+
+    var numero2 = prompt("Insira o segundo número: ");
+    
+    var resultadoMultiplicacao = multiplicar(numero1, numero2);
+    
+    
+
+    function multiplicar(n1, n2) {
+        resultado = n1 * n2
+        return resultado;
+    }
+
+    divLocal.innerHTML = 'O resultado da multiplicação é: ' + resultadoMultiplicacao;
+</script>
+</html>
